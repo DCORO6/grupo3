@@ -1,5 +1,6 @@
 package com.ejercicio.grupo3;
 
-public interface PintorRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
 
+public interface PintorRepository extends JpaRepository<Pintor, Long> {
 }

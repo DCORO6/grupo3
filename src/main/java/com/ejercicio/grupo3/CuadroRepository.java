@@ -1,5 +1,6 @@
 package com.ejercicio.grupo3;
 
-public interface CuadroRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
 
+public interface CuadroRepository extends JpaRepository<Cuadro, Long> {
 }
