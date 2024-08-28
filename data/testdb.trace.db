@@ -1,0 +1,24 @@
+2024-08-28 20:55:41.622564+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PINTOR" already exists; SQL statement:
+CREATE TABLE pintor ( id BIGINT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(255) NOT NULL, nacionalidad VARCHAR(255) NOT NULL ) [42101-224]
+2024-08-28 20:57:33.705465+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PINTOR" already exists; SQL statement:
+CREATE TABLE pintor ( id BIGINT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(255) NOT NULL, nacionalidad VARCHAR(255) NOT NULL ) [42101-224]
+2024-08-28 20:57:44.919188+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PINTOR" already exists; SQL statement:
+CREATE TABLE pintor ( id BIGINT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(255) NOT NULL, nacionalidad VARCHAR(255) NOT NULL ) [42101-224]
+2024-08-28 20:57:50.967218+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PINTOR" already exists; SQL statement:
+CREATE TABLE pintor ( id BIGINT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(255) NOT NULL, nacionalidad VARCHAR(255) NOT NULL ) [42101-224]
+2024-08-28 20:58:39.304461+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PINTOR" already exists; SQL statement:
+CREATE TABLE pintor ( id BIGINT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(255) NOT NULL, nacionalidad VARCHAR(255) NOT NULL ) [42101-224]
+2024-08-28 21:00:24.903187+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PINTOR" already exists; SQL statement:
+CREATE TABLE pintor ( id BIGINT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(255) NOT NULL, nacionalidad VARCHAR(255) NOT NULL ) [42101-224]
+2024-08-28 21:02:13.231877+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PINTOR" already exists; SQL statement:
+CREATE TABLE pintor ( id BIGINT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(255) NOT NULL, nacionalidad VARCHAR(255) NOT NULL ) [42101-224]
+2024-08-28 21:08:00.291392+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PINTOR" already exists; SQL statement:
+CREATE TABLE pintor( id BIGINT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(255) NOT NULL, nacionalidad VARCHAR(255) NOT NULL ) [42101-224]
