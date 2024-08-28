@@ -33,15 +33,15 @@
     },
     methods: {
       async fetchPintor(id) {
-        const response = await axios.get(`pintores/${id}`);
+        const response = await axios.get(`/api/pintores/${id}`);
         this.pintor = response.data;
       },
       async submitForm() {
         const id = this.$route.params.id;
         if (this.isEdit) {
-          await axios.put(`pintores/${id}`, this.pintor);
+          await axios.put(`/api/pintores/${id}`, this.pintor);
         } else {
-          await axios.post('pintores', this.pintor);
+          await axios.post('/api/pintores', this.pintor);
         }
         this.$router.push('/pintores');
       },

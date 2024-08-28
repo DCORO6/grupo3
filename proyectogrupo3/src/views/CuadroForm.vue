@@ -4,7 +4,7 @@
       <form @submit.prevent="submitForm">
         <label for="titulo">Título:</label>
         <input v-model="cuadro.titulo" id="titulo" required />
-        <label for="anio">Año:</label>
+        <label for="ano">Año:</label>
         <input v-model="cuadro.anio" id="anio" type="number" required />
         <button type="submit">Guardar</button>
       </form>
@@ -28,7 +28,7 @@
     },
     methods: {
       async submitForm() {
-        await axios.post('cuadros', this.cuadro);
+        await axios.post('/api/cuadros', this.cuadro);
         this.$router.push('/pintores');
       },
     },

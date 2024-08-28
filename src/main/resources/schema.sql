@@ -7,7 +7,7 @@ CREATE TABLE pintor (
 CREATE TABLE cuadro (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     titulo VARCHAR(255) NOT NULL,
-    anio INT NOT NULL,
+    ano INT NOT NULL,
     pintor_id BIGINT,
     FOREIGN KEY (pintor_id) REFERENCES pintor(id)
 );

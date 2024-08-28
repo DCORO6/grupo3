@@ -28,14 +28,14 @@ export default {
   },
   methods: {
     async fetchPintores() {
-      const response = await axios.get('pintores');
+      const response = await axios.get('/api/pintores');
       this.pintores = response.data;
     },
     addPintor() {
       this.$router.push('/pintores/add');
     },
     async deletePintor(id) {
-      await axios.delete(`pintores/${id}`);
+      await axios.delete(`/api/pintores/${id}`);
       this.fetchPintores();
     },
     editPintor(id) {

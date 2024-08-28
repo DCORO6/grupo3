@@ -14,7 +14,7 @@ public class Cuadro {
     private Long id;
 
     private String titulo;
-    private int anio;
+    private int ano;
 
     @ManyToOne
     private Pintor pintor;
@@ -37,11 +37,11 @@ public class Cuadro {
     }
 
     public int getAnio() {
-        return anio;
+        return ano;
     }
 
     public void setAnio(int anio) {
-        this.anio = anio;
+        this.ano = anio;
     }
 
     public Pintor getPintor() {
