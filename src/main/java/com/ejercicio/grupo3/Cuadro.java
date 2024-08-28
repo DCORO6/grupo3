@@ -1,5 +1,6 @@
 package com.ejercicio.grupo3;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,9 +15,11 @@ public class Cuadro {
     private Long id;
 
     private String titulo;
+    @Column(name = "ano")
     private int ano;
 
     @ManyToOne
+    @JoinColumn(name = "pintor_id")
     private Pintor pintor;
 
     // Getters y Setters
@@ -36,12 +39,12 @@ public class Cuadro {
         this.titulo = titulo;
     }
 
-    public int getAnio() {
+    public int getAno() {
         return ano;
     }
 
-    public void setAnio(int anio) {
-        this.ano = anio;
+    public void setAno(int ano) {
+        this.ano = ano;
     }
 
     public Pintor getPintor() {
