@@ -1,41 +1,71 @@
-<script setup>
-</script>
-
 <template>
-  <header>
-    <div class="wrapper">
-      <h1>Galería de Arte</h1>
-      
-    </div>
-  </header>
-  
-  <main>
-    <section class="intro">
-      <h2>Bienvenidos a nuestra Galería de Arte</h2>
-      <p>Explora una colección única de cuadros y conoce a los pintores detrás de cada obra maestra.</p>
-      <br><br><br>
-      <button class="enter-button">Entrar</button>
+  <div class="container">
+    <div class="top-section">
+      <header>
+        <div class="wrapper">
+          <h2>Bienvenidos a nuestra Galería de Arte</h2>
+        </div>
+      </header>
 
-      <nav>
-      <router-link to="/pintores">Ver Lista de Pintores</router-link>
-    </nav>
-    <router-view></router-view>
-    </section>
-  </main>
+      <main>
+        <section class="intro">
+          <img src="@/assets/img/monalisa.jpg" alt="Monalisa">
+          <br><br>
+        </section>
+      </main>
+    </div>
+    
+    <div class="bottom-section">
+      <img class="tickets" src="@/assets/img/tickets.png" alt="tickets">
+      <button class="enter-button" @click="goToPintores">Entrar</button>
+    </div>
+  </div>
 </template>
+
+<script setup>
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+function goToPintores() {
+  router.push('/pintores')
+}
+</script>
 
 <style scoped>
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f0e6f6; /* Color de fondo suave */
-  color: #333;
   margin: 0;
   padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+.tickets {
+  width: 300px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.top-section {
+  background-color: rgb(53, 25, 45);
+  color: white;
+  flex: 1; 
+}
+
+.bottom-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  background-color: rgb(82, 82, 82);
+  color: white;
+  flex-direction: column;
+
+  flex: 1; /* Ocupa la mitad inferior de la pantalla */
 }
 
 header {
-  background-color: #333;
-  color: #fff;
   padding: 1rem;
   text-align: center;
 }
@@ -46,19 +76,12 @@ header .wrapper {
   justify-content: center;
 }
 
-.logo {
-  height: 50px;
-  margin-right: 1rem;
-}
-
 h1 {
   margin: 0;
   font-size: 2rem;
 }
 
-main {
-  padding: 2rem;
-}
+
 
 .intro {
   text-align: center;
@@ -72,55 +95,22 @@ main {
 
 .intro p {
   font-size: 1rem;
-  color: #666;
+  color: #333;
 }
 
 .enter-button {
+  margin-top: 10px;
   background-color: #ff6347; /* Color llamativo */
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 8px;
+  padding: 0.75rem 7rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .enter-button:hover {
   background-color: #ff4500; /* Color al pasar el ratón */
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.art-piece {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 200px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.art-piece img {
-  width: 100%;
-  height: auto;
-}
-
-.art-piece h3 {
-  margin: 0.5rem 0;
-  font-size: 1.2rem;
-}
-
-.art-piece p {
-  margin: 0;
-  font-size: 1rem;
-  color: #666;
-  padding-bottom: 1rem;
 }
 </style>
