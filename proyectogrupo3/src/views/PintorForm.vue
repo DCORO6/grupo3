@@ -10,7 +10,10 @@
         <label for="nacionalidad">Nacionalidad:</label>
         <input v-model="pintor.nacionalidad" id="nacionalidad" required />
       </div>
-      <button type="submit">{{ isEdit ? 'Actualizar' : 'Guardar' }}</button>
+      <div>
+        <button type="submit">{{ isEdit ? 'Actualizar' : 'Guardar' }}</button>
+        <button type="button" @click="cancel">Cancelar</button>
+      </div>
     </form>
   </div>
 </template>
@@ -49,6 +52,9 @@ export default {
       }
       this.$router.push('/pintores');
     },
+    cancel() {
+      this.$router.push('/pintores');
+    }
   },
 };
 </script>
@@ -82,8 +88,15 @@ button {
   padding: 10px 20px;
   cursor: pointer;
   font-size: 16px;
+  margin-right: 10px;
 }
 button:hover {
   background-color: #36986a;
+}
+button[type="button"] {
+  background-color: #f44336;
+}
+button[type="button"]:hover {
+  background-color: #d32f2f;
 }
 </style>
