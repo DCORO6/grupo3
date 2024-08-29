@@ -51,7 +51,7 @@
                   <td>{{ cuadro.id }}</td>
                   <td>{{ cuadro.titulo }}</td>
                   <td>{{ cuadro.ano }}</td>
-                  <td>{{ cuadro.pintor_id }}</td>
+                  <td>{{ cuadro.pintor_id}}</td>
                 </tr>
               </tbody>
             </table>
@@ -60,18 +60,19 @@
       </div>
     </div>
   </div>
+  <PintoresList/>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
 import axios from '@/axios';
-
+import PintoresList from './PintoresList.vue';
 const pintores = ref([]);
 const cuadros = ref([]);
 
 const fetchPintores = async () => {
   try {
-    const response = await axios.get('/pintores');
+    const response = await axios.get('/api/pintores');
     pintores.value = response.data;
   } catch (error) {
     console.error('Error fetching pintores:', error);
@@ -80,7 +81,7 @@ const fetchPintores = async () => {
 
 const fetchCuadros = async () => {
   try {
-    const response = await axios.get('/cuadros');
+    const response = await axios.get('/api/cuadros');
     cuadros.value = response.data;
   } catch (error) {
     console.error('Error fetching cuadros:', error);

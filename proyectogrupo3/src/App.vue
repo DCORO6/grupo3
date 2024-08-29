@@ -6,5 +6,4 @@
 </script>
 
 <style scoped>
-/* Estilos globales aquí */
 </style>
