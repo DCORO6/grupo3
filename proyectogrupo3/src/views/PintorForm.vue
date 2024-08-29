@@ -50,10 +50,10 @@ export default {
       } else {
         await axios.post('/api/pintores', this.pintor);
       }
-      this.$router.push('/pintores');
+      this.$router.push('/listaPintores');
     },
     cancel() {
-      this.$router.push('/pintores');
+      this.$router.push('/listaPintores');
     }
   },
 };

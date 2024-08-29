@@ -9,5 +9,5 @@ CREATE TABLE IF NOT EXISTS cuadro (
     titulo VARCHAR(255) NOT NULL,
     ano INT NOT NULL,
     pintor_id BIGINT,
-    FOREIGN KEY (pintor_id) REFERENCES pintor(id)
+    FOREIGN KEY (pintor_id) REFERENCES pintor(id) 
 );

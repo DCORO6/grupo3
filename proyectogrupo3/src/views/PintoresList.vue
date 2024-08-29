@@ -57,13 +57,17 @@ export default {
       this.$router.push('/pintores/add');
     },
     async deletePintor(id) {
-      try {
-        await axios.delete(`/api/pintores/${id}`);
-        this.fetchPintores();
-      } catch (error) {
-        console.error('Error deleting pintor:', error);
-      }
-    },
+  try {
+    const confirmed = confirm('¿Estás seguro de que deseas eliminar este pintor?');
+    if (confirmed) {
+      await axios.delete(`/api/pintores/${id}`);
+      this.fetchPintores();
+    }
+  } catch (error) {
+    console.error('Error deleting pintor:', error);
+  }
+},
+
     editPintor(id) {
       this.$router.push(`/pintores/edit/${id}`);
     },
