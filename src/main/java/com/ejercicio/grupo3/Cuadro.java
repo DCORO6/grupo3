@@ -20,6 +20,7 @@ public class Cuadro {
     @Column(name = "ano")
     private int ano;
 
+    @ManyToOne
     @JoinColumn(name = "pintor_id")
     private Pintor pintor;
 
