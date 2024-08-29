@@ -47,3 +47,28 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+button {
+  margin-left: 10px;
+  background-color: #42b983;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #36986a;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin-bottom: 10px;
+}
+</style>

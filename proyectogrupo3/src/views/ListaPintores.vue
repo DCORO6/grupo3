@@ -4,31 +4,8 @@
 
     <div class="row justify-content-center">
       <!-- Lista de Pintores -->
-      <div class="col-lg-5 mb-5">
-        <div class="card shadow-sm">
-          <div class="card-header bg-primary text-white text-center">
-            <h2>Pintores</h2>
-          </div>
-          <div class="card-body">
-            <table class="table table-striped table-hover">
-              <thead class="thead-dark">
-                <tr>
-                  <th>ID</th>
-                  <th>Nombre</th>
-                  <th>Nacionalidad</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="pintor in pintores" :key="pintor.id">
-                  <td>{{ pintor.id }}</td>
-                  <td>{{ pintor.nombre }}</td>
-                  <td>{{ pintor.nacionalidad }}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
+    
+      <PintoresList/>
 
       <!-- Lista de Cuadros -->
       <div class="col-lg-5 mb-5">
@@ -60,7 +37,6 @@
       </div>
     </div>
   </div>
-  <PintoresList/>
 </template>
 
 <script setup>
